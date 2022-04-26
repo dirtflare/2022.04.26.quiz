@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>課題クイズ</title>
+<link href ="style.css" rel ="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<script src = "main.js"></script>
+</head>
+
+<body>
+<!-- タイトル -->
+<h1>QUIZ TRUSTNAS</h1>
+
+<!-- クイズ問題 -->
+<form id = "quiz" name = "quiz">
+<!-- クイズ第1問 -->
+<p class = "questions">直感でかっこいいと思うローマ字を3文字記入せよ</p>
+<input id = "textbox" type = "text" name = "question1">
+<!-- クイズ第2問 -->
+<p class = "questions">次世代を代表するクリエイターといえば?</p>
+<input type = "radio" id = "mc" name = "question2" value = "NAS"> NAS<br>
+<input type = "radio" id = "mc" name = "question2" value = "奈須"> 奈須<br>
+<!-- クイズ第3問 -->
+<p class = "questions">結局のところ?</p>
+<input type = "radio" id = "mc" name = "question3" value = "わからない"> わからない<br>
+<input type = "radio" id = "mc" name = "question3" value = "NAS"> NAS<br>
+<!-- 正解判定ボタン -->
+<input id = "button" type = "button" value = "正解は？" onclick = "check();">
+</form>
+
+<div id = "after_submit">    <!-- 正解数判定画面-->
+<p id = "number_correct"></p>    <!-- 正解数判定-->
+<p id = "message"></p>    <!-- 正解判定後画面の文字 -->
+<img id = "picture">    <!-- 正解判定後画面の写真 -->
+</div>
+
+<!-- 背景動画 -->
+<html>
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/jquery.mb.YTPlayer/3.3.9/css/jquery.mb.YTPlayer.min.css">
+<div id="ytPlayer" data-property="{
+        videoURL: 'https://www.youtube.com/watch?v=tkgCnTvM5wI',
+        autoPlay: true,
+        loop: 1,
+        mute: true,
+        showControls: false,
+        showYTLogo: false,
+    }">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mb.YTPlayer/3.3.9/jquery.mb.YTPlayer.min.js"></script>
+    <script>
+        $(function () {
+            $("#ytPlayer").YTPlayer();
+        });
+    </script>
+
+</html>
+
+</body>
+
+
+
